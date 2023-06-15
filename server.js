@@ -10,8 +10,8 @@ const pool = new Pool({
     connectionString: process.env.DATABASE_URL
 });
 
-app.use(express.json());
 app.use(express.static('public'))
+app.use(express.json());
 
 app.get('/wish', async (req, res) => {
     try {
